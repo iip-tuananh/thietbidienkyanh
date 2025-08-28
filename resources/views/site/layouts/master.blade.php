@@ -1092,9 +1092,9 @@
             $('.addThis_listSharing').fadeOut(150);
         })
     </script>
-    <a target="_blank" class="livechat-mes" href="https://m.me/sapo.vn">
+    <a target="_blank" class="livechat-mes" href="{{ $config->facebook }}">
         <img width="60" height="60"
-            src="//bizweb.dktcdn.net/100/509/495/themes/943203/assets/messenger.svg?1753947700397" alt="Messenger">
+            src="/site/images/messenger.svg" alt="Messenger">
     </a>
 </body>
 
