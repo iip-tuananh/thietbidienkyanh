@@ -225,7 +225,7 @@
     height: 40px;
     font-size: 16px;
     text-align: center;
-    background-color: #b42d2c;
+    background-color: #081b40;
     z-index: 1;
     overflow: hidden;
     position: relative;
@@ -252,7 +252,7 @@
 
 .title-module a {
     transition: 0.3s all;
-    background-color: #b42d2c;
+    background-color: #081b40;
     height: 46px;
     padding: 0px 10px 0px 10px;
     position: relative;
@@ -362,7 +362,7 @@
 }
 
 .section_cate .box_cate_index .item-cate:hover h3,.section_cate .box_cate_index .item-cate:focus h3 {
-    color: #b42d2c
+    color: #081b40
 }
 
 .section_cate .item-pro-cate {
@@ -1083,7 +1083,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    background-color: #b42d2c;
+    background-color: #081b40;
     padding: 10px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px
@@ -1156,7 +1156,7 @@
     padding: 10px;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    border: 5px solid #b42d2c;
+    border: 5px solid #081b40;
     border-top: none;
     overflow: hidden
 }
@@ -1383,7 +1383,7 @@
 
 .section_product_noibat .title_index .title-module-2 a {
     transition: 0.3s all;
-    background-color: #b42d2c;
+    background-color: #081b40;
     height: 46px;
     padding: 0px 10px 0px 10px;
     position: relative;
@@ -1506,7 +1506,7 @@
 }
 
 .section_product_noibat .tabs-title .tab-link.current span,.section_product_noibat .tabs-title .tab-link:hover span {
-    color: #b42d2c
+    color: #081b40
 }
 
 .section_product_noibat .tab-content {
@@ -1550,7 +1550,7 @@
 
 .section_product_noibat .see-more a:hover {
     color: #fff;
-    background-color: #b42d2c
+    background-color: #081b40
 }
 
 @media (max-width: 767px) {
@@ -1757,11 +1757,11 @@
 }
 
 .section_why_choose .img_thm .icon_video:hover span {
-    background-color: #b42d2c
+    background-color: #081b40
 }
 
 .section_why_choose .img_thm .icon_video:hover span::before {
-    background-color: #b42d2c
+    background-color: #081b40
 }
 
 .section_why_choose .content_choose {
@@ -2434,7 +2434,7 @@
 }
 
 .section_blog .title_blogs a {
-    color: #b42d2c;
+    color: #081b40;
     font-size: 40px;
     margin-bottom: 10px;
     text-align: center;
@@ -2493,7 +2493,7 @@
 
 .section_blog .see-more a:hover {
     color: #fff;
-    background-color: #b42d2c
+    background-color: #081b40
 }
 
 .section_blog .item_null {
@@ -2744,7 +2744,7 @@
     padding: 15px;
     background-color: #fff;
     text-align: center;
-    border: 3px solid #e74516;
+    border: 3px solid #0a1c40;
     margin-bottom: 30px
 }
 

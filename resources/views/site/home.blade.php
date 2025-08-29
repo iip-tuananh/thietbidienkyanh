@@ -280,19 +280,44 @@
                 <div class="box_cate_index">
                     @foreach ($productCategories as $category)
                         <div class="item-cate">
-                            <a href="{{ $category->category_url }}"
-                                title="{{ $category->name }}" class="opaci_href"></a>
-                            <h3>{{ $category->name }}</h3>
-                            <span>( {{ $category->products->count() }} sản phẩm )</span>
-                            <div class="item-pro-cate">
-                                <div class="box_img_cate">
-                                    <img width="480" height="480" class="lazyload"
-                                        src="{{ $category->image ? $category->image->path : 'https://placehold.co/480x480' }}"
-                                        alt="{{ $category->name }}" />
+                            <a href="{{ $category->category_url }}" title="{{ $category->name }}" class="opaci_href"></a>
+                            <div class="item-cate-content">
+                                <div class="item-pro-cate">
+                                        <img width="480" height="480" class="lazyload"
+                                            src="{{ $category->image ? $category->image->path : 'https://placehold.co/480x480' }}"
+                                            alt="{{ $category->name }}" />
+                                </div>
+                                <div class="item-cate-content-title">
+                                    <h3>{{ $category->name }}</h3>
+                                    <span>( {{ $category->products->count() }} sản phẩm )</span>
                                 </div>
                             </div>
                         </div>
                     @endforeach
+                    <style>
+                        .item-cate-content {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            align-content: center;
+                            justify-content: space-between;
+                        }
+
+                        .item-pro-cate {
+                            max-width: 45%;
+                            max-height: 120px;
+                        }
+
+                        .item-pro-cate img {
+                            width: 100%;
+                            height: 120px;
+                            object-fit: cover;
+                        }
+
+                        .item-cate-content-title {
+                            width: 55%;
+                        }
+                    </style>
                 </div>
             </section>
         @endif
@@ -413,8 +438,7 @@
                 <section class="section_product_1">
                     <div class="container">
                         <h2 class="title-module">
-                            <a href="{{ $category->category_url }}"
-                                title="{{ $category->name }}">
+                            <a href="{{ $category->category_url }}" title="{{ $category->name }}">
                                 {{ $category->name }}
                                 <span class="icon_title">
                                     <svg height="512" viewBox="0 0 24 24" width="512"
@@ -513,8 +537,7 @@
                     <div class="container">
                         <div class="box_banner_index row">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <a class="three_banner"
-                                    href="{{ $category->category_url }}"
+                                <a class="three_banner" href="{{ $category->category_url }}"
                                     title="{{ $category->name }}">
                                     <img width="1920" height="225" class="lazyload"
                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
@@ -529,8 +552,7 @@
                 <section class="section_product_2">
                     <div class="container">
                         <h2 class="title-module">
-                            <a href="{{ $category->category_url }}"
-                                title="{{ $category->name }}">
+                            <a href="{{ $category->category_url }}" title="{{ $category->name }}">
                                 {{ $category->name }}
                                 <span class="icon_title">
                                     <svg height="512" viewBox="0 0 24 24" width="512"
@@ -548,8 +570,7 @@
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12 order-2 order-lg-1">
                                 <div class="banner_col_2">
-                                    <a class="banner_men"
-                                        href="{{ $category->category_url }}"
+                                    <a class="banner_men" href="{{ $category->category_url }}"
                                         title="{{ $category->name }}">
                                         <img width="380" height="720" class="lazyload"
                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
@@ -1167,29 +1188,29 @@
                     <div class="swiper_blogs swiper-container">
                         <div class="swiper-wrapper load-after" data-section="section_blog">
                             @foreach ($category->posts as $post)
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 swiper-slide">
-                                <div class="item-blog">
-                                    <div class="block-thumb">
-                                        <a class="thumb" href="{{ route('front.detail-blog', $post->slug) }}"
-                                            title="{{ $post->name }}">
-                                            <img width="600" height="380" class="lazyload"
-                                                src="/site/images/lazy.png"
-                                                data-src="{{ $post->image ? $post->image->path : 'https://placehold.co/600x380' }}"
-                                                alt="{{ $post->name }}">
-                                        </a>
-                                    </div>
-                                    <div class="day_time">
-                                        <span class="day_item">{{ $post->created_at->format('d') }}</span>
-                                        <span class="myear_item">{{ $post->created_at->format('m/Y') }}</span>
-                                    </div>
-                                    <div class="block-content">
-                                        <h3><a href="{{ route('front.detail-blog', $post->slug) }}"
-                                                title="{{ $post->name }}">{{ $post->name }}</a></h3>
-                                        <p class="justify">{{ $post->intro }}</p>
-                                    </div>
+                                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 swiper-slide">
+                                    <div class="item-blog">
+                                        <div class="block-thumb">
+                                            <a class="thumb" href="{{ route('front.detail-blog', $post->slug) }}"
+                                                title="{{ $post->name }}">
+                                                <img width="600" height="380" class="lazyload"
+                                                    src="/site/images/lazy.png"
+                                                    data-src="{{ $post->image ? $post->image->path : 'https://placehold.co/600x380' }}"
+                                                    alt="{{ $post->name }}">
+                                            </a>
+                                        </div>
+                                        <div class="day_time">
+                                            <span class="day_item">{{ $post->created_at->format('d') }}</span>
+                                            <span class="myear_item">{{ $post->created_at->format('m/Y') }}</span>
+                                        </div>
+                                        <div class="block-content">
+                                            <h3><a href="{{ route('front.detail-blog', $post->slug) }}"
+                                                    title="{{ $post->name }}">{{ $post->name }}</a></h3>
+                                            <p class="justify">{{ $post->intro }}</p>
+                                        </div>
 
+                                    </div>
                                 </div>
-                            </div>
                             @endforeach
                         </div>
                         <div class="swiper-button-prev"></div>

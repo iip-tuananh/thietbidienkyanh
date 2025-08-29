@@ -66,8 +66,8 @@
 }
 
 .box-height-col .control-menu-2 svg:hover {
-    background-color: #b42d2c;
-    border: 1px solid #b42d2c
+    background-color: #081b40;
+    border: 1px solid #081b40
 }
 
 .box-height-col.overflow .control-menu-2 {
@@ -925,11 +925,11 @@
 }
 
 .layout-collection .dqdt-sidebar .filter-content .filter-container .filter-container__clear-all:hover {
-    color: #b42d2c
+    color: #081b40
 }
 
 .layout-collection .dqdt-sidebar .filter-content .filter-container .filter-container__clear-all:hover i svg path {
-    fill: #b42d2c
+    fill: #081b40
 }
 
 .layout-collection .dqdt-sidebar .filter-content .filter-container .filter-container__selected-filter-item {
@@ -985,7 +985,7 @@
 }
 
 .layout-collection .dqdt-sidebar .filter-content .filter-container .filter-container__selected-filter-list ul li:hover,.layout-collection .dqdt-sidebar .filter-content .filter-container .filter-container__selected-filter-list ul li:focus {
-    background: #b42d2c
+    background: #081b40
 }
 
 .layout-collection .dqdt-sidebar .filter-content .filter-container .filter-container__selected-filter-list ul li a {
